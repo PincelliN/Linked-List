@@ -1,6 +1,6 @@
 class ListNode<T> {
   next?: ListNode<T>;
-  constructor(value: T) {}
+  constructor(public value: T) {}
 }
 
 class LinkedList<T> {
@@ -27,7 +27,7 @@ class LinkedList<T> {
   print() {
     let curret = this.root;
     while (curret) {
-      console.log(curret.next);
+      console.log(curret.value);
       curret = curret.next;
     }
   }
@@ -38,8 +38,10 @@ const numberList = new LinkedList<number>();
 numberList.add(10);
 numberList.add(4);
 numberList.add(-3);
+numberList.add(20);
 
 console.log(numberList.getNumberOfNode());
 numberList.print();
+console.log(numberList);
 
 const nameList = new LinkedList<string>();
