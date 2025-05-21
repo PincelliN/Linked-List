@@ -19,4 +19,27 @@ class LinkedList<T> {
     }
     this.length++;
   }
+
+  getNumberOfNode() {
+    return this.length;
+  }
+
+  print() {
+    let curret = this.root;
+    while (curret) {
+      console.log(curret.next);
+      curret = curret.next;
+    }
+  }
 }
+
+const numberList = new LinkedList<number>();
+
+numberList.add(10);
+numberList.add(4);
+numberList.add(-3);
+
+console.log(numberList.getNumberOfNode());
+numberList.print();
+
+const nameList = new LinkedList<string>();
